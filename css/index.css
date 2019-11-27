@@ -1,0 +1,290 @@
+:root {
+    --col-bg: #573E37;
+    --col-bg-on: #F0D1C8;
+    --col-p: #2E574C;
+    --col-p2: #A38278;
+    --col-p3: #78A398;
+
+}
+
+body {
+    font-family: "Avenir Next", Arial, sans-serif;
+    max-width: 640px;
+    min-width: 320px;
+    
+}
+/* fonts */
+h1 {
+    font-size: 2em
+}
+h2 {
+    font-size: 1em
+}
+h3 {
+    font-size: 1em;
+    font-weight: 410;
+}
+p {
+    font-size: 0.75em;
+    font-weight: 220;
+}
+
+
+.top-bar {
+    background-color: var(--col-p2);
+    padding: 20px 0 20px;
+    text-align: center;
+}
+
+/* Top logo Bar */
+
+.logo-bar {
+    background-color: var(--col-p2);
+    width: 100%;
+    max-height: 51px;
+    text-align: left;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1em;
+    vertical-align: middle
+}
+
+.logo-bar li{
+    display: inline-block;
+    color: var(--col-bg-on);
+    padding: 0px;
+}
+
+.logo-bar-search-form {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    vertical-align: middle;
+    position: relative;
+}
+.menu-bar-search {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 28px 0
+}
+.menu-bar-small {
+    padding: 28px 0
+}
+button {
+    background-color: transparent;
+    border-color: transparent;
+    color: var(--col-bg-on)
+}
+
+input {
+    background-color: transparent;
+    border-color: transparent;
+}
+.mainlogo {
+    min-width: 205px
+
+}
+.top-bar a {
+    display: inline-block;
+    width: 100%;
+    color: white;
+}
+.top-bar li {
+    padding: 25px
+}
+
+.logo-bar-search-form li {
+    padding: 25px
+}
+
+/*menu bar*/
+
+.menu-bar {
+    background-color: var(--col-bg);
+    color: var(--col-bg-on);
+    width: 100%;
+    display: block;
+    margin-top: 15px;
+    text-transform: uppercase;
+    font-size: 0.875em
+}
+.menu-bar i {
+    display: none;
+}
+.menu-categories li{
+    list-style: none;
+    padding: 6px;
+    border: none;
+    display: inline-block;
+    vertical-align: middle;
+
+}
+.menu-categories a {
+    text-decoration: none;
+    color: var(--col-bg-on)
+}
+
+/* coffee lists */
+
+.product-list {
+  text-align: center;
+  color: var(--col-bg);
+  padding: 1em;
+
+  width: 100%;
+  height: 100%;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1em;
+} 
+
+
+.product-list i {
+    color: var(--col-p2);
+}
+
+.product-list div{
+    padding: 1em
+}
+
+dl {
+    font-size: 0.875em;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+dt dd {
+    display: inline-block;
+    padding: 0.3em
+}
+
+div{
+    font-size: 0.875em
+}
+
+/* footer */
+footer {
+    background-color: var(--col-bg-on);
+    width: 100%;
+    display: grid;
+    grid-template-columns: 3fr 2fr 5fr;
+    height: 100%;
+}
+
+.terms a{
+    font-weight: 0.7em;
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 0.3em;
+
+}
+
+.social-media li {
+    display: inline-block;
+    max-width: 40px;
+    padding: 0.5em;
+}
+
+footer li {
+    list-style: none;
+    padding: 0.5em;
+}
+.email-input {
+    background-color: white;
+    width: 100%;
+    padding: 0.3em;    
+}
+
+@media screen and (min-width: 593px) {
+    .menu-bar-small button{
+        display: none;
+    }
+    
+}
+@media screen and (max-width: 592px) {
+    .product-list {
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 2em;
+        padding: 2em;
+    }
+    .menu-bar {
+        display: none;
+    }
+    .logo-bar fieldset {
+        display: none;
+    }
+    .logo-bar li{
+        padding: 2em 1.5em 0 1em;
+    }
+    .menu-bar-small {
+        display: inline-block;
+    }
+    footer {
+        background-color: var(--col-bg-on);
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .email{
+        grid-column-end: span 2;
+    }
+    
+   
+
+
+}
+
+@media screen and (max-width: 495px) {
+    p {
+        display: none;
+    }
+    h3 {
+        font-size: 0.83em;
+        font-weight: 500
+    }
+    .product-list {
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 2em;
+        padding: 2em;
+    }
+
+    .menu-bar-search{
+        display: none;
+    }
+    .top-bar-tools{
+        display: none;
+    }
+  
+    }
+    .logo-bar li{
+        padding: 2em 1.5em 0 1em;
+    }
+    .menu-bar-small {
+        display: inline-block;
+    }
+    footer {
+        background-color: var(--col-bg-on);
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .email{
+        grid-column-end: span 2;
+    }
+    article p {
+        height: 10em
+    }
+    dt {
+        display: none;
+    }
+    dl {
+        font-size: 0.8em;
+        padding: 0.8em;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    article div {
+        padding: 0
+    }
+    span {
+        font-size: 0.9em;
+    } 
