@@ -34,6 +34,7 @@ p {
     background-color: var(--col-p2);
     padding: 20px 0 20px;
     text-align: center;
+    width: 100%;
 }
 
 /* Top logo Bar */
@@ -123,7 +124,17 @@ input {
     text-decoration: none;
     color: var(--col-bg-on)
 }
-
+.toggleView {
+    display: grid;
+    list-style: none;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 2em;
+    gap: 1em;
+    
+}
+.toggleView a{
+    text-decoration: none;
+}
 /* coffee lists */
 
 .product-list {
@@ -146,6 +157,22 @@ input {
 
 .product-list div{
     padding: 1em
+}
+
+.callout {
+    display: inline-block;
+    padding: 0.25em 0.5em;
+    border-radius: 0.25em;
+    background-color: grey;
+    color: white;
+    box-shadow: 0 0 0.5em rgba(0,0,0,0.4);
+    text-shadow: 0.125em 0.125em 0 rgba(0,0,0,0.4);
+  }
+.urgent {
+    background-color: crimson;
+ }
+.urgent2 {
+    background-color: #7B84DB;
 }
 
 dl {
@@ -235,7 +262,7 @@ footer li {
 
 }
 
-@media screen and (max-width: 495px) {
+/* @media screen and (max-width: 495px) {
     p {
         display: none;
     }
@@ -287,4 +314,4 @@ footer li {
     }
     span {
         font-size: 0.9em;
-    } 
+    }  */
