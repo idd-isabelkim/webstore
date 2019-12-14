@@ -166,6 +166,9 @@ input {
 .product-price::before {
     content: "$";
 }
+.productSearch input {
+    border: solid rgba(0,0,0,0.2) 0.1em;
+}
 .callout {
     display: inline-block;
     padding: 0.25em 0.5em;

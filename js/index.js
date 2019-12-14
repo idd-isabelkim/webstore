@@ -48,7 +48,7 @@ const products = [
         summary: `Stay tuned for our upcoming coffee beans!`,
         price: `1000`,
         qty: `1000`,
-        category: `single`,
+        category: `None`,
     }
 ]
 
@@ -102,30 +102,16 @@ function getProductAsHtmlString(product) {
 
 function renderProducts(arrToRender) {
     const arrOfHtmlProducts = arrToRender.map(getProductAsHtmlString);
-    const strOfHtmlProducts = arrOfHtmlproducts.join('\n');
+    const strOfHtmlProducts = arrOfHtmlProducts.join('\n');
   
-    document.getElementById('products').innerHTML = strOfHtmlproducts;
+    document.getElementById('products').innerHTML = strOfHtmlProducts;
   }
 
-function loadProductCategory(event) {
+  function loadProductCategory(event) {
     const categoryImSearchingFor = event.target.value;
     renderProducts(products.filter(isInThisCategory, categoryImSearchingFor)); 
   }
-//   function renderProducts(arrToRender) {
-//     // Connect each Object from the incoming Array to an HTML template
-//     const arrOfHtmlProducts = arrToRender.map(getProductAsHtmlString);
-//     const strOfHtmlProducts = arrOfHtmlProducts.join(`\n`);
-  
-//     document.getElementById(`products`).innerHTML += getProductAsHtmlString[0];  
-//   }
 
-  
-
-  document.getElementById(`products`).innerHTML += getProductAsHtmlString(products[0]);
-  document.getElementById(`products`).innerHTML += getProductAsHtmlString(products[1]);
-  document.getElementById(`products`).innerHTML += getProductAsHtmlString(products[2]);
-  document.getElementById(`products`).innerHTML += getProductAsHtmlString(products[3]);
-  document.getElementById(`products`).innerHTML += getProductAsHtmlString(products[4]);document.getElementById(`products`).innerHTML += getProductAsHtmlString(products[5]);document.getElementById(`products`).innerHTML += getProductAsHtmlString(products[6]);
 
   renderProducts(products);
 
