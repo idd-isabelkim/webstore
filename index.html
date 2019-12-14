@@ -54,7 +54,19 @@
 
     <main>
       <div class="filter">
-        
+        <fieldset>
+          <label for="productCategory">Filter</label>
+            <select name="productCategory" id="productCategory">
+              <option value="all">All</option>
+              <option value="blends">Blends</option>
+              <option value="single">Single Origin</option>
+            </select>
+        </fieldset>
+        <div class="search">
+          <label for="productName">Product Name:</label>
+          <input type="text" name="productName" id="productName" value="">
+        </div>
+
         <section class="toggleView" id="toggleView">View 
           <li><a href="#">2</a></li>
           <li><a href="#">4</li></a>

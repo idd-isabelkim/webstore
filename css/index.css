@@ -9,7 +9,6 @@
 
 body {
     font-family: "Avenir Next", Arial, sans-serif;
-    max-width: 640px;
     min-width: 320px;
     
 }
@@ -124,6 +123,11 @@ input {
     text-decoration: none;
     color: var(--col-bg-on)
 }
+.filter {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 1em;
+}
 .toggleView {
     display: grid;
     list-style: none;
@@ -159,6 +163,9 @@ input {
     padding: 1em
 }
 
+.product-price::before {
+    content: "$";
+}
 .callout {
     display: inline-block;
     padding: 0.25em 0.5em;
@@ -262,7 +269,7 @@ footer li {
 
 }
 
-/* @media screen and (max-width: 495px) {
+@media screen and (min-width: 495px) {
     p {
         display: none;
     }
@@ -271,11 +278,14 @@ footer li {
         font-weight: 500
     }
     .product-list {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(3, 1fr);
         grid-gap: 2em;
         padding: 2em;
+        width: 100%;
     }
-
+    .mainlogo {
+        max-width: 9em;
+    }
     .menu-bar-search{
         display: none;
     }
@@ -314,4 +324,4 @@ footer li {
     }
     span {
         font-size: 0.9em;
-    }  */
+    } 
