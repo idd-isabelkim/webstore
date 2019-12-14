@@ -52,6 +52,15 @@ const products = [
     }
 ]
 
+function isInStock(prod) {
+    if (prod.qty > 0) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
+
 function isInThisCategory(product) {
     if (this == 'all') {
       return true;
@@ -61,6 +70,14 @@ function isInThisCategory(product) {
       return false;
     }
   }
+
+function isMatchingName(product) {
+  if (product.name.toUpperCase().includes(this.trim().toUpperCase())) {
+    return true;
+  } else {
+    return false;
+  }
+}
 
 function getProductAsHtmlString(product) {
     let greatdeal;
@@ -107,12 +124,22 @@ function renderProducts(arrToRender) {
     document.getElementById('products').innerHTML = strOfHtmlProducts;
   }
 
-  function loadProductCategory(event) {
+function toggleCourseLayout(event) {
+  document.getElementById('products').classList.toggle('toggleView');
+}
+
+function loadProductCategory(event) {
     const categoryImSearchingFor = event.target.value;
     renderProducts(products.filter(isInThisCategory, categoryImSearchingFor)); 
   }
 
+function loadProductByName(event) {
+  const nameImSearchingFor = event.target.value;
+  renderProducts(products.filter(isMatchingName, nameImSearchingFor));
+}
+
 
   renderProducts(products);
-
   document.getElementById('productCategory').addEventListener('change', loadProductCategory);
+  document.getElementById('productName').addEventListener('input', loadProductByName);
+  document.getElementById('toggleView').addEventListener('click', toggleProductLayout);

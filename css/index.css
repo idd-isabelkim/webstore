@@ -125,20 +125,10 @@ input {
 }
 .filter {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 0.5fr;
     padding: 1em;
 }
-.toggleView {
-    display: grid;
-    list-style: none;
-    grid-template-columns: 1fr 1fr 1fr;
-    width: 2em;
-    gap: 1em;
-    
-}
-.toggleView a{
-    text-decoration: none;
-}
+
 /* coffee lists */
 
 .product-list {
@@ -146,11 +136,9 @@ input {
   color: var(--col-bg);
   padding: 1em;
 
-  width: 100%;
-  height: 100%;
 
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   grid-gap: 1em;
 } 
 
@@ -193,7 +181,7 @@ dl {
 
 dt dd {
     display: inline-block;
-    padding: 0.3em
+    padding: 0.3em;
 }
 
 div{
@@ -242,7 +230,7 @@ footer li {
 }
 @media screen and (max-width: 592px) {
     .product-list {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(1, 1fr);
         grid-gap: 2em;
         padding: 2em;
     }
@@ -281,7 +269,7 @@ footer li {
         font-weight: 500
     }
     .product-list {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(2, 1fr);
         grid-gap: 2em;
         padding: 2em;
         width: 100%;
@@ -328,3 +316,12 @@ footer li {
     span {
         font-size: 0.9em;
     } 
+
+@media screen and (min-width: 750px) {
+    .product-list {
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 2em;
+        padding: 2em;
+        width: 100%;
+    }
+}
